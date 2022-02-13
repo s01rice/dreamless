@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.9c1d2134.chunk.css",
-    "main.js": "/static/js/main.a9597362.chunk.js",
-    "main.js.map": "/static/js/main.a9597362.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c9d1fb2f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c9d1fb2f.js.map",
-    "static/css/2.f3fd09a0.chunk.css": "/static/css/2.f3fd09a0.chunk.css",
-    "static/js/2.5d55764b.chunk.js": "/static/js/2.5d55764b.chunk.js",
-    "static/js/2.5d55764b.chunk.js.map": "/static/js/2.5d55764b.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.f3fd09a0.chunk.css.map": "/static/css/2.f3fd09a0.chunk.css.map",
-    "static/css/main.9c1d2134.chunk.css.map": "/static/css/main.9c1d2134.chunk.css.map",
-    "static/js/2.5d55764b.chunk.js.LICENSE.txt": "/static/js/2.5d55764b.chunk.js.LICENSE.txt",
-    "static/media/404-illustration.ee4d58f7.svg": "/static/media/404-illustration.ee4d58f7.svg"
+    "main.css": "/dreamless/static/css/main.be1dbb3d.chunk.css",
+    "main.js": "/dreamless/static/js/main.8cc2b4cd.chunk.js",
+    "main.js.map": "/dreamless/static/js/main.8cc2b4cd.chunk.js.map",
+    "runtime-main.js": "/dreamless/static/js/runtime-main.84c0e380.js",
+    "runtime-main.js.map": "/dreamless/static/js/runtime-main.84c0e380.js.map",
+    "static/css/2.f3fd09a0.chunk.css": "/dreamless/static/css/2.f3fd09a0.chunk.css",
+    "static/js/2.6615a53d.chunk.js": "/dreamless/static/js/2.6615a53d.chunk.js",
+    "static/js/2.6615a53d.chunk.js.map": "/dreamless/static/js/2.6615a53d.chunk.js.map",
+    "index.html": "/dreamless/index.html",
+    "static/css/2.f3fd09a0.chunk.css.map": "/dreamless/static/css/2.f3fd09a0.chunk.css.map",
+    "static/css/main.be1dbb3d.chunk.css.map": "/dreamless/static/css/main.be1dbb3d.chunk.css.map",
+    "static/js/2.6615a53d.chunk.js.LICENSE.txt": "/dreamless/static/js/2.6615a53d.chunk.js.LICENSE.txt",
+    "static/media/404-illustration.ee4d58f7.svg": "/dreamless/static/media/404-illustration.ee4d58f7.svg",
+    "static/media/rocket.9da69abe.mp4": "/dreamless/static/media/rocket.9da69abe.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.c9d1fb2f.js",
+    "static/js/runtime-main.84c0e380.js",
     "static/css/2.f3fd09a0.chunk.css",
-    "static/js/2.5d55764b.chunk.js",
-    "static/css/main.9c1d2134.chunk.css",
-    "static/js/main.a9597362.chunk.js"
+    "static/js/2.6615a53d.chunk.js",
+    "static/css/main.be1dbb3d.chunk.css",
+    "static/js/main.8cc2b4cd.chunk.js"
   ]
 }
