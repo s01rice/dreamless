@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import './css/style.scss';
 
@@ -7,6 +8,8 @@ import './css/style.scss';
 
 // Import pages
 import Home from './pages/Home';
+import Team from './pages/Team';
+import Contact from './pages/Contact';
 import PageNotFound from './pages/utility/PageNotFound';
 
 import Header from './pages/components/Header.js';
@@ -22,22 +25,33 @@ function App() {
   }, [location.pathname]); // triggered on route change
 
   // mobile hamburger menu
-  const [navToggle, setNavToggle] = useState(false);
-  function handleClick(isOpen) {
-    setNavToggle(!navToggle);
-  }
+  // const [navToggle, setNavToggle] = useState(false);
+  // function handleClick(isOpen) {
+  //   setNavToggle(!navToggle);
+  // }
 
   return (
     <>
-      <Header handleClick={handleClick} />
-      <MobileNav nav={navToggle} />
-      <Switch>
-        <Route exact path="/" component={Home} />
-
-        <Route path="*">
-          <PageNotFound />
-        </Route>
-      </Switch>
+      <Header />
+      <MobileNav />
+      <TransitionGroup>
+        <CSSTransition key={location.key} classNames="fade" timeout={300} unmountOnExit>
+          <Switch location={location}>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/team">
+              <Team />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
+            <Route path="*">
+              <PageNotFound />
+            </Route>
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
     </>
   );
 }

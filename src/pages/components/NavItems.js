@@ -1,27 +1,17 @@
 export const NavItems = [
     {
         title: 'home',
-        url: '#',
+        url: '/',
         cName: 'nav-links'
     },
     {
-        title: 'identity',
-        url: '#',
+        title: 'team',
+        url: '/team',
         cName: 'nav-links'
     },
     {
-        title: 'updates',
-        url: '#',
-        cName: 'nav-links'
-    },
-    {
-        title: 'twitter',
-        url: '#',
-        cName: 'nav-links'
-    },
-    {
-        title: 'discord',
-        url: '#',
+        title: 'contact',
+        url: '/contact',
         cName: 'nav-links'
     }
 ]

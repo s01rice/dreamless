@@ -22,6 +22,7 @@ module.exports = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         mono: ['Major Mono Display', 'monospace'],
+        courier: ['Courier New', 'monospace'],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1.5' }],

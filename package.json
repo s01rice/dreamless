@@ -1,7 +1,6 @@
 {
   "name": "dreamless",
   "version": "0.1.0",
-  "homepage": "https://firzenlovemore.github.io/dreamless",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
@@ -9,6 +8,7 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "@types/react-transition-group": "^4.4.4",
     "autoprefixer": "^9.8.8",
     "chart.js": "^3.5.0",
     "chartjs-adapter-moment": "^1.0.0",
