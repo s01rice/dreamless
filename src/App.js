@@ -1,57 +1,55 @@
-import React, { useEffect } from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Switch, Route, useLocation, useHistory } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
-import './css/style.scss';
 
-// import './charts/ChartjsConfig';
-
-// Import pages
 import Home from './pages/Home';
+import Story from './pages/Story';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
-import PageNotFound from './pages/utility/PageNotFound';
 
-import Header from './pages/components/Header.js';
 import MobileNav from './pages/components/MobileNav.js';
-
 function App() {
+
+  const [isFirstMount, setIsFirstMount] = useState(true);
   const location = useLocation();
+  const history = useHistory();
 
   useEffect(() => {
-    document.querySelector('html').style.scrollBehavior = 'auto';
-    window.scroll({ top: 0 });
-    document.querySelector('html').style.scrollBehavior = '';
-  }, [location.pathname]); // triggered on route change
+    const unlisten = history.listen(() => {
+      isFirstMount && setIsFirstMount(false);
+    });
 
-  // mobile hamburger menu
-  // const [navToggle, setNavToggle] = useState(false);
-  // function handleClick(isOpen) {
-  //   setNavToggle(!navToggle);
-  // }
+    return unlisten;
+  }, [history, isFirstMount]);
+
+  //   if (document.readyState === "complete") {
+  //     onPageLoad();
+  //   } else {
+  //     window.addEventListener("load", onPageLoad);
+  //     return () => window.removeEventListener("load", onPageLoad);
+  //   }
+  // }, []);
 
   return (
     <>
-      <Header />
       <MobileNav />
-      <TransitionGroup>
-        <CSSTransition key={location.key} classNames="fade" timeout={300} unmountOnExit>
-          <Switch location={location}>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/team">
-              <Team />
-            </Route>
-            <Route exact path="/contact">
-              <Contact />
-            </Route>
-            <Route path="*">
-              <PageNotFound />
-            </Route>
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route
+            exact path="/"
+            component={(props) => (
+              <Home isFirstMount={isFirstMount} {...props} />
+            )} />
+          {/* <Route path="/story" component={Story} /> */}
+          <Route path="/team" component={Team} />
+          <Route path="/contact" component={Contact} />
+          <Route path="*">
+            <Home />
+          </Route>
+        </Switch>
+      </AnimatePresence>
+
     </>
   );
 }
