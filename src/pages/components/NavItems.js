@@ -4,11 +4,12 @@ export const NavItems = [
         url: '/',
         cName: 'nav-links'
     },
+    /*
     {
         title: 'story',
         url: '/story',
         cName: 'nav-links'
-    },
+    },*/
     {
         title: 'team',
         url: '/team',
